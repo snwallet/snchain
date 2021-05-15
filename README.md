@@ -1,2 +1,2 @@
-# snchain
-sn chain
+# chain
+rust chain
