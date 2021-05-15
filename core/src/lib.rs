@@ -21,10 +21,12 @@ mod tests {
         let tx2 = tx1.clone();
         // println!("{:?}",tx1);
         let _utxo = Utxo::new(tx1,tx2);
-
+        let _utxo1 = _utxo.clone();
         let mut chain = Chain::new();
         Chain::add_block(&mut chain,_utxo);
+        Chain::add_block(&mut chain,_utxo1);
         println!("chain:{:?}",chain);
+        println!("chain len:{:?}",chain.blocks.len());
 
         // let bk3 = Block::new(_utxo.clone(),vb);
         // println!("block3:{:?}",bk3);

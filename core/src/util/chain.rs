@@ -21,7 +21,8 @@ impl Chain {
     }
     pub fn add_block(&mut self,utxo:Utxo){
         let last_block = Self::last_block( self);
-        let block = Block::new(utxo,&last_block.prehash,last_block.height);
+        println!("{:?}",last_block);
+        let block = Block::new(utxo,&last_block.hash,last_block.height);
         self.blocks.push(block);
     }
 
